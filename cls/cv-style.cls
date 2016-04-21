@@ -1,4 +1,14 @@
 % -- Encoding UTF-8 without BOM
+% The class cv-style.cls was originally created by
+% Adrien Friggeri and has been modified to be compiled using Overleaf by
+% Alejandro Pérez Londoño. This template is under the licence
+% Creative commons 4.0 : https://creativecommons.org/licenses/by/4.0/legalcode
+%
+% Changes, Germain Salvato Vallverdu
+% April 2016
+%   add french option
+%   add shortcuts to adjust page layout
+%
 
 \ProvidesClass{cv-style}[2015/02/27 CV class]
 \NeedsTeXFormat{LaTeX2e}
