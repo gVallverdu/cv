@@ -1,12 +1,7 @@
 
 
 fr-short: cv-fr-short.tex
-	xelatex $<
-	xelatex $<
-	bibtex cv-fr-short1.aux
-	xelatex $<
-	xelatex $<
-
+	latexmk -xelatex -bibtex $<
 
 clean:
-	rm -v *.aux *.log *.toc *.bbl
+	rm -v *.aux *.log *.toc *.bbl btaux.aux

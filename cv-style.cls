@@ -8,7 +8,7 @@
 % April 2016
 %   add french option
 %   add shortcuts to adjust page layout
-%
+%   change colors
 
 \ProvidesClass{cv-style}[2015/02/27 CV class]
 \NeedsTeXFormat{LaTeX2e}
@@ -30,26 +30,39 @@
 
 \definecolor{white}{RGB}{255,255,255}
 
-\definecolor{darkgray}{HTML}{333333}
-\definecolor{gray}{HTML}{4D4D4D}
-\definecolor{lightgray}{HTML}{999999}
+% old colors
+% \definecolor{darkgray}{HTML}{333333}
+% \definecolor{gray}{HTML}{4D4D4D}
+% \definecolor{lightgray}{HTML}{999999}
+%
+% \definecolor{blue}{HTML}{66D9EE}
+% \definecolor{red}{HTML}{FA2772}
+% \definecolor{orange}{HTML}{FE9720}
+% \definecolor{green}{HTML}{A7E22E}
+% \definecolor{purple}{HTML}{9358FE}
+% \definecolor{aquamarine}{HTML}{36AF90}
 
-\definecolor{blue}{HTML}{66D9EE}
+% from uppa colors
+\definecolor{darkgray}{HTML}{3C3D3F}
+\definecolor{gray}{HTML}{4B4C4E}
+\definecolor{lightgray}{HTML}{9B9C9E}
+
+\definecolor{blue}{HTML}{2698D0}
 \definecolor{red}{HTML}{FA2772}
-\definecolor{orange}{HTML}{FE9720}
-\definecolor{green}{HTML}{A7E22E}
-\definecolor{purple}{HTML}{9358FE}
-\definecolor{aquamarine}{HTML}{36AF90}
+\definecolor{orange}{HTML}{F49C00}
+\definecolor{green}{HTML}{B5BD00}
+\definecolor{purple}{HTML}{92609F}
+\definecolor{aquamarine}{HTML}{97BDD9}
 
 \definecolor{date}{HTML}{A4A4A4}
 
 \ifdefined\@cv@print
-  \colorlet{blue}{gray}
-  \colorlet{red}{gray}
-  \colorlet{orange}{gray}
-  \colorlet{green}{gray}
-  \colorlet{purple}{gray}
-  \colorlet{aquamarine}{gray}
+  % \colorlet{blue}{gray}
+  % \colorlet{red}{gray}
+  % \colorlet{orange}{gray}
+  % \colorlet{green}{gray}
+  % \colorlet{purple}{gray}
+  % \colorlet{aquamarine}{gray}
   \colorlet{fillheader}{white}
   \colorlet{header}{gray}
 \else
@@ -174,10 +187,10 @@
     \color{%
       \ifcase\value{colorCounter}%
         blue\or%
-        red\or%
         orange\or%
         green\or%
         purple\or%
+        red\or%
         aquamarine\else%
         headercolor\fi%
     } #1#2#3%
