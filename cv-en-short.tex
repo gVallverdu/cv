@@ -1,84 +1,103 @@
 % -- Encoding UTF-8 without BOM
 % -- XeLaTeX => PDF (BIBER)
 
-\documentclass[french]{cv-style}      % Add 'print' as an option into the square bracket to remove colours from this template for printing.
-                                      % Add 'espanol' as an option into the square bracket to change the date format of the Last Updated Text
-                                      % Add 'french' as an option into the square bracket to change the date format of the Last Updated Text
+\documentclass{cv-style}     % Add 'print' as an option into the square bracket to remove colours from this template for printing.
 
-% \sethyphenation[variant=british]{english}{} % Add words between the {} to avoid them to be cut
-\sethyphenation{french}{} % Add words between the {} to avoid them to be cut
+\setdefaultlanguage[variant=british]{english}
+\sethyphenation[variant=british]{english}{} % Add words between the {} to avoid them to be cut
 
+%----------------------------------------------------------------------------------------
+%	Page layout
+%----------------------------------------------------------------------------------------
 \cvheadheight{3.5cm}
 \cvasidewidth{4.7}
 \cvasidevpos{3.5}
 \cvmainwidth{11.5cm}
-\geometry{a4paper, left=6.4cm, top=2.5cm, right=1cm, bottom=1cm, nohead, nofoot}
+\geometry{left=6.4cm, top=2.5cm, right=1cm, bottom=1cm}
 
+%----------------------------------------------------------------------------------------
+%	Bibliography
+%----------------------------------------------------------------------------------------
 \usepackage[sectcntreset]{bibtopic}
 \usepackage{natbib}
 \bibliographystyle{bib/achemso_perso}
 \AtBeginDocument{\nocite{achemso-control}}
 
-\usepackage{hyperref}
+%----------------------------------------------------------------------------------------
+%	hyperlink setup
+%----------------------------------------------------------------------------------------
+\hypersetup{
+    pdftitle=Resume \textbar{} Germain Vallverdu,%
+    pdfauthor=Germain Vallverdu
+}
+
+%----------------------------------------------------------------------------------------
+%	Setup las updated text
+%----------------------------------------------------------------------------------------
+%\lastupdated{Last Updated on \today}
+
+%----------------------------------------------------------------------------------------
+%	Add a few custom packages
+%----------------------------------------------------------------------------------------
+\usepackage{fontawesome}
 
 \begin{document}
 
-\header{Germain }{Salvato Vallverdu}{Maître de conférences -- Docteur en Chimie-Physique}          % Your name
-\lastupdated
+\header{Germain }{Vallverdu}{Associate Professor -- PhD in Chemical Physics}          % Your name
 
 %----------------------------------------------------------------------------------------
 %	SIDEBAR SECTION  -- In the aside, each new line forces a line break
 %----------------------------------------------------------------------------------------
 
 \begin{aside}
-    \includegraphics[width=.9\columnwidth]{img/germain}
+    \includegraphics[width=.8\columnwidth]{img/germain}
     10 août 1983, France
-    Marié, 2 enfants
+    Maried, 2 children
     %
     \section{Contact}
     germain.vallverdu@univ-pau.fr
-    ~
-    05 59 40 78 51
-    06 88 59 08 87
+    (33) 5 59 40 78 51
+    (33) 6 88 59 08 87
     ~
     IPREM
     Technopôle Hélioparc
     2 ave du Président P. Angot
-    64053 Pau cedex 9
+    FR-64053 Pau cedex 9
     %
-    \section{Chimie Théorique}
-    Modélisation
-    Développement
-    Stratégie de calculs
-    VASP, CRYSTAL (solide)
-    Gaussian (molécule)
-    DL-POLY, AMBER (dynamique)
+    \section{Theoretical Chemistry}
+    Computational strategy
+    Development
+    Surfaces, interfaces
+    VASP, CRYSTAL (solid)
+    Gaussian (molecule)
+    DL-POLY, AMBER (dynamic)
     %
     \section{Programmation}
     Fortran, C
     Python
     \LaTeX{}, HTML/CSS
     %
-    ~
-    \section{Langues}
-    Français
-    Anglais (Professional)
+    \section{Languages}
+    French
+    English (Professional)
     %
-    \section{Sur internet}
+    \section{On the web}
     \href{http://orcid.org/0000-0003-1116-8776}{$\vcenter{\hbox{\includegraphics{img/iD-icon}}}$ orcid.org/0000-0003-1116-8776}
-    \href{https://github.com/gVallverdu}{$\vcenter{\hbox{\includegraphics[height=16pt]{img/GitHub-Mark}}}$ gVallverdu}
+    %\href{https://github.com/gVallverdu}{$\vcenter{\hbox{\includegraphics[height=16pt]{img/GitHub-Mark}}}$ gVallverdu}
+    \href{https://github.com/gVallverdu}{\faGithub{} gVallverdu}
+    \href{http://gvallver.perso.univ-pau.fr}{\faGlobe{} gvallver.perso.univ-pau.fr}
     %
 \end{aside}
 
-\section{Résumé}
+\section{Abs}{tract}
 
-Physico-chimiste de formation, je suis Maître de conférences à l'Université de
-Pau et des Pays de l'Adour dans l'Institut des sciences analytiques et de
-physico-chimie pour l'environnement et les matériaux (IPREM). Mes activités de
-recherche concernent le développement de stratégies calculatoires pour l'étude
-de systèmes complexes par des méthodes de chimie théorique à différentes échelles
-de temps et ou d'espace. J'effectuer mes enseignement à l'UFR des sciences et
-techniques de Pau.
+Assistant professor at the Université de Pau et des Pays de l'Adour,
+I am a theoretical chemist at IPREM institute (Institute for Analytical sciences and
+chemical physics applied to environment and materials).
+My research activities concern the development of new methods and computational
+strategies at different time or space scales, applied to the investigations
+of complex systems.
+I teach mainly chemical-physics subjects at the UFR sciences et techniques de Pau.
 
 %----------------------------------------------------------------------------------------
 %	SKILLS SECTION
@@ -93,34 +112,26 @@ techniques de Pau.
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Experience Professionnelle}
+\section{Experience}{ Professionnelle}
 
 \begin{entrylist}
 %------------------------------------------------
 \entry
-  {depuis 2010~}
+  {since 2010~}
   {Université de Pau et des Pays de l'Adour}
   {Pau, France}
-  {\jobtitle{Maître de conférences}\\
-   Chimie théorique et simulation numérique.
-   Surface, interface et réactivité.}
+  {\jobtitle{Associate professor}\\
+   Theoretical chemistry and computational approaches.
+   Surfaces, interfaces and reactivity.}
 %------------------------------------------------
 \entry
   {2009--2010}
   {CEA - DAM}
   {Bruyères le châtel, France}
   {
-  %\jobtitle{Postdoctoral position}\\
-  \jobtitle{Chercheur-ingénieur}\\
-  %Development and implementation of mesoscopic models for reactive shock waves propagation in heterogeneous systems.\\
-  Développement et implémentation d'un modèle mésoscopique pour l'étude de la propagation
-  d'ondes de chock réactives dans un système hétérogène.
-%  Detailed achievements:
-%  \begin{itemize}
-%    \item Achievement 1. Achievement 1. Achievement 1.
-%    \item Achievement 2. Achievement 2. Achievement 2. Achievement 2. Achievement 2. Achievement 2.
-%    \item Achievement 3. Achievement 3. Achievement 3. Achievement 3.
-%  \end{itemize}
+  \jobtitle{Postdoctoral position}\\
+  Development and implementation of mesoscopic models for reactive shock waves
+  propagation in heterogeneous systems.\\
   }
 %------------------------------------------------
 \entry
@@ -128,14 +139,8 @@ techniques de Pau.
   {Université Paris-Sud 11}
   {Orsay, France}
   {
-  %\jobtitle{PhD Student}\\
-  \jobtitle{Allocataire de recherche, moniteur}\\
-  %Theoretical study of photophysical processes in fluorescent proteins.\\
-  Étude théorique de processus photophysiques dans les protéines fluorescentes.
-%  Detailed achievements:
-%  \begin{itemize}
-%    \item Achievement 1. Achievement 1. Achievement 1. Achievement 1. Achievement 1. Achievement 1. Achievement 1. Achievement 1.
-%  \end{itemize}
+  \jobtitle{PhD Student}\\
+  Theoretical study of photophysical processes in fluorescent proteins.\\
   }
 %------------------------------------------------
 \end{entrylist}
@@ -144,25 +149,25 @@ techniques de Pau.
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Formation}
+\section{Form}{ation}
 
 \begin{entrylist}
 %------------------------------------------------
 \entry
 {2006-2009}
-{Doctorat de chimie {\normalfont spécialité chimie-théorique}}
+{PhD in chemistry {\normalfont speciality theoretical chemistry}}
 {Université Paris-Sud 11}
 {Mention très honorable}
 %------------------------------------------------
 \entry
 {2004-2006}
-{Master de chimie {\normalfont spécialité physico-chimie moléculaire}}
+{Master degree of chemistry}
 {Université Paris-Sud 11}
-{Mention TB}
+{{\normalfont speciality molecular chemical-physics}\par Mention TB}
 %------------------------------------------------
 \entry
 {2003-2004}
-{Licence de chimie-physique}
+{Bachelor Degree of chemical-physics}
 {Université Paris-Sud 11}
 {Mention TB}
 %------------------------------------------------
@@ -174,7 +179,7 @@ techniques de Pau.
 %------------------------------------------------
 \entry
 {2001-2003}
-{CPGE {\normalfont PCSI-PC}}
+{Undergraduate {\normalfont physics and chemistry}}
 {Lycée François Arago, Perpignan}
 {}
 \end{entrylist}
@@ -183,28 +188,12 @@ techniques de Pau.
 %	OTHER QUALIFICATIONS SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Publications}
+\section{Main}{ publications}
 
-\nocite{vallverdu2016, guille2015, Guille2014, Martin2012, Maillet2011, Jonasson2011, Vallverdu2010, Vallverdu2009}
+\nocite{vallverdu2016, guille2015, Guille2014, Martin2012, Maillet2011, Vallverdu2010}
 \begin{btSect}{bib/articles}
     \btPrintCited
 \end{btSect}
-
-%----------------------------------------------------------------------------------------
-%	AWARDS SECTION
-%----------------------------------------------------------------------------------------
-
-% \section{awards}
-%
-% \begin{entrylist}
-% %------------------------------------------------
-% \entry
-% {2014}
-% {Award name}
-% {Institution}
-% {Award description. Award description. Award description. Award description. Award description. Award description. Award description. }
-% %------------------------------------------------
-% \end{entrylist}
 
 %----------------------------------------------------------------------------------------
 %	INTERESTS SECTION

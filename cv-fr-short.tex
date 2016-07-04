@@ -1,42 +1,57 @@
 % -- Encoding UTF-8 without BOM
 % -- XeLaTeX => PDF (BIBER)
 
-\documentclass[french]{cv-style}      % Add 'print' as an option into the square bracket to remove colours from this template for printing.
-                                      % Add 'espanol' as an option into the square bracket to change the date format of the Last Updated Text
-                                      % Add 'french' as an option into the square bracket to change the date format of the Last Updated Text
+\documentclass{cv-style}     % Add 'print' as an option into the square bracket to remove colours from this template for printing.
 
-% \sethyphenation[variant=british]{english}{} % Add words between the {} to avoid them to be cut
+\setdefaultlanguage{french}
 \sethyphenation{french}{} % Add words between the {} to avoid them to be cut
 
+%----------------------------------------------------------------------------------------
+%	Page layout
+%----------------------------------------------------------------------------------------
 \cvheadheight{3.5cm}
 \cvasidewidth{4.7}
 \cvasidevpos{3.5}
 \cvmainwidth{11.5cm}
-\geometry{a4paper, left=6.4cm, top=2.5cm, right=1cm, bottom=1cm, nohead, nofoot}
+\geometry{left=6.4cm, top=2.5cm, right=1cm, bottom=1cm}
 
+%----------------------------------------------------------------------------------------
+%	Bibliography
+%----------------------------------------------------------------------------------------
 \usepackage[sectcntreset]{bibtopic}
 \usepackage{natbib}
 \bibliographystyle{bib/achemso_perso}
 \AtBeginDocument{\nocite{achemso-control}}
 
-\usepackage{hyperref}
+%----------------------------------------------------------------------------------------
+%	hyperlink setup
+%----------------------------------------------------------------------------------------
 \hypersetup{
-    colorlinks=false,
-    pdfborder={0 0 0},
+    pdftitle=CV \textbar{} Germain Vallverdu,%
+    pdfauthor=Germain Vallverdu
 }
+
+%----------------------------------------------------------------------------------------
+%	Setup las updated text
+%----------------------------------------------------------------------------------------
+%\lastupdated{Mise à jour le \today}
+
+%----------------------------------------------------------------------------------------
+%	Add a few custom packages
+%----------------------------------------------------------------------------------------
 \usepackage{fontawesome}
 
 \begin{document}
 
 \header{Germain }{Salvato Vallverdu}{Maître de conférences -- Docteur en Chimie-Physique}          % Your name
-\lastupdated
+%\lastupdated
 
 %----------------------------------------------------------------------------------------
 %	SIDEBAR SECTION  -- In the aside, each new line forces a line break
 %----------------------------------------------------------------------------------------
 
 \begin{aside}
-    \includegraphics[width=.9\columnwidth]{img/germain}
+    \includegraphics[width=.8\columnwidth]{img/germain}
     10 août 1983, France
     Marié, 2 enfants
     %
@@ -75,17 +90,18 @@
     %
 \end{aside}
 
-\section{Résumé}
+\section{Rés}{umé}
 
 Physico-chimiste de formation, je suis Maître de conférences en chimie théorique
- à l'Université de Pau et des Pays de l'Adour. Mes activités de
+ à l'Université de Pau et des Pays de l'Adour à l'IPREM (Institut des sciences
+ analytiques et de Physico-chimie pour l'environnement et les matériaux). Mes activités de
 recherche concernent le développement et l'utilisation de méthodes de simulations
 numériques à
 différentes échelles de temps et ou d'espace, appliquées
 à l'étude de systèmes complexes. J'effectue mes enseignements à l'UFR sciences et
-techniques de Pau pincipalement en chimie-physique.
+techniques de Pau principalement en chimie-physique.
 
-\section{Experience Professionnelle}
+\section{Experience}{ Professionnelle}
 
 \begin{entrylist}
 %------------------------------------------------
@@ -122,7 +138,7 @@ techniques de Pau pincipalement en chimie-physique.
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Formation}
+\section{Form}{ation}
 
 \begin{entrylist}
 %------------------------------------------------
@@ -161,7 +177,7 @@ techniques de Pau pincipalement en chimie-physique.
 %	OTHER QUALIFICATIONS SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Publications significatives}
+\section{Publications}{ significatives}
 
 \nocite{vallverdu2016, guille2015, Guille2014, Martin2012, Maillet2011, Vallverdu2010}
 \begin{btSect}{bib/articles}
