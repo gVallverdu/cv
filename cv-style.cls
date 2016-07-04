@@ -6,15 +6,16 @@
 %
 % Changes, Germain Salvato Vallverdu
 % April 2016
-%   add french option
-%   add shortcuts to adjust page layout
-%   change colors
+%   * remove lang options and update lastupdated macro. Put the text you want
+%     in the macro.
+%   * add shortcuts to adjust page layout
+%   * change colors
+%   * update sectioncolor macro. Now there is two arguments. The first one is
+%     colored.
 
 \ProvidesClass{cv-style}[2015/02/27 CV class]
 \NeedsTeXFormat{LaTeX2e}
 
-\DeclareOption{espanol}{\def\@cv@espanol{}}
-\DeclareOption{french}{\def\@cv@french{}}
 \DeclareOption{print}{\def\@cv@print{}}
 \DeclareOption*{%
   \PassOptionsToClass{\CurrentOption}{article}%
@@ -133,17 +134,9 @@
 %\sethyphenation[<options>]{<language>}{<list of words separated by spaces>}
 
 \setdefaultlanguage[variant=british]{english}
-\def\lastupdatedtext{Last Updated on}
-\ifdefined\@cv@espanol
-  \setdefaultlanguage{spanish}
-  \def\lastupdatedtext{Última Actualización el}
-\fi
-\ifdefined\@cv@french
-  \setdefaultlanguage{french}
-  \def\lastupdatedtext{Mise à jour le}
-\fi
 
-\newcommand{\lastupdated}{\def\@lastupdated{ok}}
+\newcommand{\lastupdated}[1]{\def\@lastupdated{#1}}
+\lastupdated{}
 
 %----------------------------------------------------------------------------------------
 % Header %
@@ -153,24 +146,22 @@
 
 \newcommand{\header}[3]{%
   \begin{tikzpicture}[remember picture,overlay]
-    \node [rectangle, fill=fillheader, anchor=north,
+    \node[rectangle, fill=fillheader, anchor=north,
            minimum width=\paperwidth,
            minimum height=\@headheight] (box) at (current page.north){};
-    \node [anchor=center] (name) at (box) {%
+    \node[anchor=center, above] (name) at (box) {%
       %\fontsize{40pt}{65pt}\color{header}%
       \fontsize{32pt}{52pt}\color{header}%
       {\thinfont #1}{\bodyfont  #2}
     };
-    \node[anchor=north] (titre) at (name.south) {
-        \fontsize{14pt}{22pt}\color{header}%
+    \node[anchor=north, yshift=-1mm] (titre) at (name.south) {
+        \fontsize{16pt}{24pt}\color{header}%
         {\thinfont #3}
     };
-    %\ifdefined\@lastupdated
-        \node[anchor=north east, inner sep=2ex] at (current page.north east) {
-            \fontsize{8pt}{10pt}\color{date}\thinfont
-            \lastupdatedtext{} \today
-        };
-    %\fi
+    \node[anchor=north east, inner sep=2ex] at (current page.north east) {
+        \fontsize{8pt}{10pt}\color{date}\thinfont
+        \@lastupdated
+    };
   \end{tikzpicture}
   \vspace{1cm}
   \vspace{-2\parskip}
@@ -182,7 +173,7 @@
 \RequirePackage{parskip}
 
 \newcounter{colorCounter}
-\def\@sectioncolor#1#2#3{%
+\newcommand{\@sectioncolor}[2]{%
   {%
     \color{%
       \ifcase\value{colorCounter}%
@@ -193,16 +184,17 @@
         red\or%
         aquamarine\else%
         headercolor\fi%
-    } #1#2#3%
+    } #1%
   }%
   \stepcounter{colorCounter}%
+  #2%
 }
 
-\renewcommand{\section}[1]{
+\renewcommand{\section}[2]{
   {\par\vspace{\parskip}
   {%
     \LARGE\headingfont\color{headercolor}%
-    \@sectioncolor #1%
+    \@sectioncolor{#1}{#2}%
   }
   \par\vspace{\parskip}}
 }
@@ -265,10 +257,10 @@
 % Other tweaks %
 %----------------------------------------------------------------------------------------
 
-\RequirePackage[left=5.6cm,top=1cm,right=1cm,bottom=1cm,nohead,nofoot]{geometry}
+\RequirePackage[left=5.6cm, top=1cm, right=1cm, bottom=1cm, nohead, nofoot, a4paper]{geometry}
 \RequirePackage{hyperref}
 \hypersetup{
-    pdftitle=CV/Resume \textbar{} Alejandro Pérez Londoño,
-    pdfauthor=Alejandro Pérez Londoño,
-    pdfsubject=CV/Resume%
-    }
+    pdfsubject=CV/Resume,
+    colorlinks=false,%
+    pdfborder={0 0 0}%
+}
