@@ -1,12 +1,12 @@
 # rules
 # -----
 
-fr-short: cv-fr-short.tex
+fr-short: cv-fr-short.tex cv_controls.bib
 	latexmk -xelatex -bibtex $<
 	@echo ""
 	@echo "done"
 
-en-short: cv-en-short.tex
+en-short: cv-en-short.tex cv_controls.bib
 	latexmk -xelatex -bibtex $<
 	@echo ""
 	@echo "done"
@@ -22,7 +22,7 @@ clean:
 	@echo ""
 	@echo "Clean up files"
 	@echo "--------------"
-	rm -vf *.aux *.log *.fls *.fdb_latexmk *.bbl *.out *.blg
+	rm -vf *.aux *.log *.fls *.fdb_latexmk *.bbl *.out *.blg *.synctex.gz
 	ls -lrth
 	@echo ""
 	@echo "done"

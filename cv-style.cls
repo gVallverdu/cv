@@ -78,7 +78,7 @@
 %----------------------------------------------------------------------------------------
 
 \RequirePackage[quiet]{fontspec}
-\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
+%\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 
 \newfontfamily\bodyfont{Roboto-Regular}[Path=fonts/]
 \newfontfamily\bodyfontit{Roboto-LightItalic}[Path=fonts/]
