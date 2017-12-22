@@ -22,7 +22,7 @@ clean:
 	@echo ""
 	@echo "Clean up files"
 	@echo "--------------"
-	rm -vf *.aux *.log *.fls *.fdb_latexmk *.bbl *.out *.blg *.synctex.gz
+	rm -vf *.aux *.log *.fls *.fdb_latexmk *.bbl *.out *.blg *.synctex.gz *.xdv
 	ls -lrth
 	@echo ""
 	@echo "done"
