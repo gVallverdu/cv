@@ -1,12 +1,12 @@
 # rules
 # -----
 
-fr-short: cv-fr-short.tex cv_controls.bib
+fr-short: cv-fr-short.tex
 	latexmk -xelatex -bibtex $<
 	@echo ""
 	@echo "done"
 
-en-short: cv-en-short.tex cv_controls.bib
+en-short: cv-en-short.tex
 	latexmk -xelatex -bibtex $<
 	@echo ""
 	@echo "done"
