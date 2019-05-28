@@ -40,21 +40,21 @@
 %----------------------------------------------------------------------------------------
 %	Add a few custom packages
 %----------------------------------------------------------------------------------------
-\usepackage{fontawesome}
+\usepackage{fontawesome5}
 
 % \usepackage{academicons}
 % \definecolor{orcidlogocol}{HTML}{A6CE39}
 
 \begin{document}
 
-\header{Germain }{Vallverdu}{Associate Professor - Chemical physics and numerical simulations}          % Your name
+\header{Germain }{Salvato Vallverdu}{Associate Professor - Chemical physics and numerical simulations}          % Your name
 
 %----------------------------------------------------------------------------------------
 %	SIDEBAR SECTION  -- In the aside, each new line forces a line break
 %----------------------------------------------------------------------------------------
 
 \begin{aside}
-    \includegraphics[width=.8\columnwidth]{img/gvallver}
+    \includegraphics[width=.8\columnwidth]{img/gvallver-red2}
     10 août 1983, France
     Maried, 2 children
     %
@@ -63,41 +63,43 @@
     (33) 5 59 40 78 51
     (33) 6 88 59 08 87
     ~
-    IPREM
+    {\color{gray} \faFlask} IPREM
     Technopôle Hélioparc
     2 ave du Président P. Angot
     FR-64053 Pau cedex 9
-    \href{http://iprem.univ-pau.fr/fr/index.html}{\color{blue} \faGlobe{} http://iprem.univ-pau.fr}
+    \href{http://iprem.univ-pau.fr/fr/index.html}{http://iprem.univ-pau.fr}
     %
     \section{Theoretical Chemistry}
     Computational strategy
     Development
+    Complex matrices
     Surfaces, interfaces
     VASP, CRYSTAL (solid)
     Gaussian, Orca (molecule)
-    Gromacs, AMBER (dynamic)
+    Gromacs, Lammps (MD)
     %
     \section{Programming}
+    {\color{gray}\faPython} Python
     Fortran, C
-    Python
     \LaTeX{}, HTML/CSS
     %
     \section{Languages}
     French
-    English (Professional)
+    English 
     %
     \section{Bibliometry}
-    15 articles
-    11 conferences
-    h-\textit{index}: 7
+    18 articles
+    13 conferences
+    h-\textit{index}: 8
     12.5 citations per item
-    150 citations (142 w/o self-citations)
+    199 citations (181 w/o self-citations)
     %
     \section{On the web}
-    \href{http://orcid.org/0000-0003-1116-8776}{$\vcenter{\hbox{\includegraphics[height=4mm]{img/orcid_128x128}}}$\small ~orcid.org/0000-0003-1116-8776}
+    \href{https://publons.com/researcher/2764008/}{\color{gray}\faNewspaper\small ~publons 2764008}
+    %\href{http://orcid.org/0000-0003-1116-8776}{$\vcenter{\hbox{\includegraphics[height=4mm]{img/orcid_128x128}}}$\small ~orcid.org/0000-0003-1116-8776}
     %\href{https://github.com/gVallverdu}{$\vcenter{\hbox{\includegraphics[height=16pt]{img/GitHub-Mark}}}$ gVallverdu}
-    \href{https://github.com/gVallverdu}{\color{gray}\faGithub{}\small ~gVallverdu}
-    \href{http://gvallver.perso.univ-pau.fr}{\color{blue}\faGlobe{}\small ~http://gvallver.perso.univ-pau.fr}
+    \href{https://github.com/gVallverdu}{\color{gray}\faGithub\small ~GitHub} \href{https://gitlab.com/gvallverdu}{\color{gray}\faGitlab\small ~GitLab}: {\small gvallverdu} 
+    \href{https://gsalvatovallverdu.gitlab.io/}{\color{gray}\faFile*[regular]\small ~gsalvatovallverdu.gitlab.io}
     %
 \end{aside}
 
@@ -107,12 +109,21 @@
 
 
 Associate professor at the University of Pau \& Pays Adour, I am a specialist in
-theoretical chemistry and numerical simulations at IPREM institute.
-My research activities concern the development of new methods and
-computational strategies at different time or space scales, applied to the
-investigations of complex systems (surfaces, interfaces, complex matrices in
-condensed matter). I teach mainly chemical-physics subjects and programming
-languages at the university of Pau.
+theoretical chemistry, molecular modeling and numerical simulations at IPREM institute.
+My research activities, in physical-chemistry, concern the understanding 
+of macroscopic phenomena such as reactivity, thermochemistry or spectroscopy from
+a microscopic description of matter. The implementation and combination of relevant computational
+strategies allows for the investigation of complex systems in various field among
+petroleum-chemistry, biological systems or energy storage materials.
+
+
+%Associate professor at the University of Pau \& Pays Adour, I am a specialist in
+%theoretical chemistry and numerical simulations at IPREM institute.
+%My research activities concern the development of new methods and
+%computational strategies at different time or space scales, applied to the
+%investigations of complex systems (surfaces, interfaces, complex matrices in
+%condensed matter). I teach mainly chemical-physics subjects and programming
+%languages at the university of Pau.
 
 % Associate professor at the Université de Pau et des Pays de l'Adour,
 % I am a theoretical chemist at IPREM institute (Institute for Analytical sciences and
@@ -187,13 +198,13 @@ languages at the university of Pau.
 %------------------------------------------------
 \entry
 {2004-2006}
-{Master degree of chemistry}
+{Master degree of physical-chemistry}
 {Université Paris-Sud 11}
-{{\normalfont speciality molecular chemical-physics}\par Mention TB}
+{{\normalfont speciality \textit{Physico-Chimie Moléculaire}}\par Mention TB}
 %------------------------------------------------
 \entry
 {2003-2004}
-{Bachelor Degree of chemical-physics}
+{Bachelor Degree of physical-chemistry}
 {Université Paris-Sud 11}
 {Mention TB}
 %------------------------------------------------
@@ -216,7 +227,8 @@ languages at the university of Pau.
 \vspace{-6mm}
 \section{Main}{ publications}
 \vspace{-0.2cm}
-\nocite{aqturin2017_2, santos2017, vallverdu2016, guille2015, Martin2012, Maillet2011, Vallverdu2010}
+\nocite{munoz2019, santos2018, aqturin2017_2, santos2017, vallverdu2016, Maillet2011, Vallverdu2010}
+%\nocite{santos2018, aqturin2017_2, santos2017, vallverdu2016, Martin2012, Maillet2011, Vallverdu2010}
 \begin{btSect}{bib/cv_articles}
     \setlength{\bibsep}{2pt}
     \btPrintCited
