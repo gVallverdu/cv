@@ -25,5 +25,16 @@ cv_long: cv_long.tex
 	$(CC) $<
 	$(CC) $<
 
+dossier_Direction: dossier_Direction.tex
+	$(CC) $<
+	$(CC) $<
+	bibtex $@1
+	bibtex $@2
+	bibtex $@3
+	bibtex $@4
+	bibtex $@5
+	$(CC) $<
+	$(CC) $<
+
 clean:
 	rm -v *.aux *.log *.bbl *.blg *.synctex.gz *.toc
