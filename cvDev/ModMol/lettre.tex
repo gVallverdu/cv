@@ -24,7 +24,7 @@
 % \documentclass[10pt,a4paper,normalphoto]{altacv}
 
 % \documentclass[10pt,a4paper,normalphoto,academicons]{altacv}
-\documentclass[11pt,a4paper,ragged2e,academicons]{alta_letter}
+\documentclass[11pt,a4paper,ragged2e]{../alta_letter}
 
 %% AltaCV uses the fontawesome and academicon fonts
 %% and packages.
@@ -44,6 +44,8 @@ bottom=2.5cm}
   \setmainfont{Ubuntu}
   \usepackage{polyglossia}
   % \setmainfont{Lato}
+  \setdefaultlanguage{french}
+  \setmainlanguage{french}
 \else
   % If using pdflatex:
   \usepackage[utf8]{inputenc}
@@ -51,9 +53,6 @@ bottom=2.5cm}
   \usepackage[default]{lato}
 \fi
 
-\usepackage{polyglossia}
-\setdefaultlanguage{french}
-\setmainlanguage{french}
 
 
 
@@ -134,7 +133,7 @@ Dans l'attente de vous rencontrer, veuillez agréer, Madame, Monsieur, l'express
 
 \hspace{.6\textwidth}Germain Salvato Vallverdu
 
-\hspace{.6\textwidth}\includegraphics[width=4cm]{maSignature}
+\hspace{.6\textwidth}\includegraphics[width=4cm]{../maSignature}
 
 
 \end{document}
