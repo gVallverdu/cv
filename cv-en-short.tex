@@ -1,270 +1,195 @@
-% -- Encoding UTF-8 without BOM
-% -- XeLaTeX => PDF (BIBER)
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.5, 1 December 2018) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
 
-\documentclass{cv-style}     % Add 'print' as an option into the square bracket to remove colours from this template for printing.
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
 
-\setdefaultlanguage[variant=british]{english}
-\sethyphenation[variant=british]{english}{} % Add words between the {} to avoid them to be cut
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
 
-%----------------------------------------------------------------------------------------
-%	Page layout
-%----------------------------------------------------------------------------------------
-\cvheadheight{3.5cm}
-\cvasidewidth{4.7}
-\cvasidevpos{3.5}
-\cvmainwidth{11.5cm}
-\geometry{left=6.4cm, top=2.5cm, right=1cm, bottom=5mm}
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
 
-%----------------------------------------------------------------------------------------
-%	Bibliography
-%----------------------------------------------------------------------------------------
-\usepackage[sectcntreset]{bibtopic}
-\usepackage{natbib}
-\bibliographystyle{bib/achemso_perso}
-\AtBeginDocument{\nocite{achemso-control}}
-%\setlength{\bibsep}{2pt plus 0.3ex}
+% \documentclass[10pt,a4paper,normalphoto,academicons]{altacv}
+\documentclass[10pt,a4paper,ragged2e,academicons]{altacv}
 
-%----------------------------------------------------------------------------------------
-%	hyperlink setup
-%----------------------------------------------------------------------------------------
-\hypersetup{
-    pdftitle=Resume \textbar{} Germain Vallverdu,%
-    pdfauthor=Germain Vallverdu
-}
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
 
-%----------------------------------------------------------------------------------------
-%	Setup las updated text
-%----------------------------------------------------------------------------------------
-%\lastupdated{Last Updated on \today}
+% Change the page layout if you need to
+\geometry{%
+left=1cm,%
+right=8.8cm,%
+marginparwidth=6.9cm,%
+marginparsep=1cm,%
+top=1.25cm,%
+bottom=1.25cm}
 
-%----------------------------------------------------------------------------------------
-%	Add a few custom packages
-%----------------------------------------------------------------------------------------
-\usepackage{fontawesome5}
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  %\setmainfont{Ubuntu}
+   \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
 
-% \usepackage{academicons}
-% \definecolor{orcidlogocol}{HTML}{A6CE39}
+% Change the colours if you want to
+\definecolor{Mulberry}{HTML}{72243D}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{GoodSamaritan}{HTML}{3C6382}
+\colorlet{heading}{GoodSamaritan}
+% \colorlet{heading}{Sepia}
+% \colorlet{accent}{Mulberry}
+\colorlet{accent}{GoodSamaritan}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+% \addbibresource{sample.bib}
 
 \begin{document}
+\name{Mario Burbano}
+\tagline{Researcher in molecular simulations}
+\photo{3.4cm}{img/MB.png}
+% \photo{2.8cm}{../img/gvallver-red.jpg}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  1983 August 10 -- Married, 2 children\\
+  \vspace{1ex}
+  \email{germain.vallverdu@gmail.com}
+  \phone{06 88 59 08 87}
+  % \mailaddress{IPREM Technopôle Hélioparc, 2 ave du Président P. Angot, FR-64053 Pau cedex 9}
+  % \location{Pau, FRANCE}
+  \homepage{gsalvatovallverdu.gitlab.io}
+  % \twitter{@twitterhandle}
+  \github{github.com/gvallverdu}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+  \orcid{orcid.org/0000-0003-1116-8776}
+  % \linkedin{linkedin.com/in/germain-salvato-vallverdu-398b31b2}
+}
 
-\header{Germain }{Salvato Vallverdu}{Associate Professor - Chemical physics and numerical simulations}          % Your name
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\parbox{.7\paperwidth}{%
+Inquisitive, exigent HPC specialist with 12+ years experience in numerical simulations and scientific programming. Seeking to leverage skills in communication, management and computer science as
+HPC engineer.
+% Critical Thinking, Active Learning,
+% Je suis à la recherche d'un nouveau projet dans lequel je pourrai apporter mes compétences en simulation, programmation et outils numériques avec un regard original lié à ma formation de physico-chimiste. Curieux de nature, je sais m'adapter et me former pour relever de nouveaux challenges.
+}
 
-%----------------------------------------------------------------------------------------
-%	SIDEBAR SECTION  -- In the aside, each new line forces a line break
-%----------------------------------------------------------------------------------------
+\end{fullwidth}
 
-\begin{aside}
-    \includegraphics[width=.8\columnwidth]{img/gvallver-red2}
-    10 août 1983, France
-    Maried, 2 children
-    %
-    \section{Contact}
-    germain.vallverdu@univ-pau.fr
-    (33) 5 59 40 78 51
-    (33) 6 88 59 08 87
-    ~
-    {\color{gray} \faFlask} IPREM
-    Technopôle Hélioparc
-    2 ave du Président P. Angot
-    FR-64053 Pau cedex 9
-    \href{http://iprem.univ-pau.fr/fr/index.html}{http://iprem.univ-pau.fr}
-    %
-    \section{Theoretical Chemistry}
-    Computational strategy
-    Development
-    Complex matrices
-    Surfaces, interfaces
-    VASP, CRYSTAL (solid)
-    Gaussian, Orca (molecule)
-    Gromacs, Lammps (MD)
-    %
-    \section{Programming}
-    {\color{gray}\faPython} Python
-    Fortran, C
-    \LaTeX{}, HTML/CSS
-    %
-    \section{Languages}
-    French
-    English 
-    %
-    \section{Bibliometry}
-    18 articles
-    13 conferences
-    h-\textit{index}: 8
-    12.5 citations per item
-    199 citations (181 w/o self-citations)
-    %
-    \section{On the web}
-    \href{https://publons.com/researcher/2764008/}{\color{gray}\faNewspaper\small ~publons 2764008}
-    %\href{http://orcid.org/0000-0003-1116-8776}{$\vcenter{\hbox{\includegraphics[height=4mm]{img/orcid_128x128}}}$\small ~orcid.org/0000-0003-1116-8776}
-    %\href{https://github.com/gVallverdu}{$\vcenter{\hbox{\includegraphics[height=16pt]{img/GitHub-Mark}}}$ gVallverdu}
-    \href{https://github.com/gVallverdu}{\color{gray}\faGithub\small ~GitHub} \href{https://gitlab.com/gvallverdu}{\color{gray}\faGitlab\small ~GitLab}: {\small gvallverdu} 
-    \href{https://gsalvatovallverdu.gitlab.io/}{\color{gray}\faFile*[regular]\small ~gsalvatovallverdu.gitlab.io}
-    %
-\end{aside}
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
 
-\vspace{0mm}
-\section{Abs}{tract}
-\vspace{-0.2cm}
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+% \marginpar{\include{sidebar}}
+% \cvsection{Experience}
+\cvsection[sidebar]{Experience}
+
+\cvevent{Associate Professor}{University of Pau \& Pays Adour}{2010 -- Ongoing}{Pau, France}
+\begin{itemize}
+\item Develop multi-scale computational strategies adapted to complex systems
+\item Develop and distribute data analyses libraries with Python
+\item Supervise research projects with Ph.D. and Master students
+\item Train UPPA users to HPC and programming languages using active learning
+\end{itemize}
+{\small 18 peer-reviewed articles, h-\textit{index} 8, 200 citations}
+
+\divider
+
+\cvevent{Research Engineer}{CEA DAM}{2009 -- 2010}{Bruyères le châtel, France}
+\begin{itemize}
+\item Used C and MPI to include Dissipative Particle Dynamics algorithms in a massively parallel program
+\item Parametrization of coarse grain models for molecular simulations
+\end{itemize}
+
+\divider
+
+\cvevent{Ph.D. in physical-chemistry}{Université Paris Sud 11}{2006 -- 2009}{Orsay, France}
+Theoretical study of photophysics properties of fluorescent proteins
+\smallskip
+\begin{itemize}
+\item Produced molecular simulations of biological systems
+\item Used Fortran to write simulations and data analysis programs
+% \item Parametrization of new simulation models
+\end{itemize}
 
 
-Associate professor at the University of Pau \& Pays Adour, I am a specialist in
-theoretical chemistry, molecular modeling and numerical simulations at IPREM institute.
-My research activities, in physical-chemistry, concern the understanding 
-of macroscopic phenomena such as reactivity, thermochemistry or spectroscopy from
-a microscopic description of matter. The implementation and combination of relevant computational
-strategies allows for the investigation of complex systems in various field among
-petroleum-chemistry, biological systems or energy storage materials.
+\cvsection{Projects}
 
-
-%Associate professor at the University of Pau \& Pays Adour, I am a specialist in
-%theoretical chemistry and numerical simulations at IPREM institute.
-%My research activities concern the development of new methods and
-%computational strategies at different time or space scales, applied to the
-%investigations of complex systems (surfaces, interfaces, complex matrices in
-%condensed matter). I teach mainly chemical-physics subjects and programming
-%languages at the university of Pau.
-
-% Associate professor at the Université de Pau et des Pays de l'Adour,
-% I am a theoretical chemist at IPREM institute (Institute for Analytical sciences and
-% chemical physics applied to environment and materials).
-% My research activities concern the development of new methods in theoretical chemistry
-% and new computational
-% strategies at different time or space scales, applied to the investigations
-% of complex systems.
-% I teach mainly chemical-physics subjects and programming languages at the university of Pau.
-
-%----------------------------------------------------------------------------------------
-%	SKILLS SECTION
-%----------------------------------------------------------------------------------------
-
-%\section{skills}
-%  \vspace{-0.2cm}
-
-%Skill 1, skill 2, skill 3, skill 4, skill 5.
-
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-\vspace{-2mm}
-\section{Professional }{Experiences}
-\vspace{-0.3cm}
-
-\begin{entrylist}
-%------------------------------------------------
-\entry
-  {since 2010~}
-  {Université de Pau et des Pays de l'Adour}
-  {Pau, France}
-  {\jobtitle{Associate professor}\\
-   Theoretical chemistry and computational approaches.
-   Surfaces, interfaces, reactivity and molecular interactions.}
-%------------------------------------------------
-\entry
-  {2009--2010}
-  {CEA - DAM}
-  {Bruyères le châtel, France}
-  {
-  \jobtitle{Postdoctoral position}\\
-  Development and implementation of a mesoscopic model for reactive shock waves
-  propagation in heterogeneous systems.
-  }
-%------------------------------------------------
-\entry
-  {2006--2009}
-  {Université Paris-Sud 11}
-  {Orsay, France}
-  {
-  \jobtitle{PhD Student}\\
-  Theoretical study of photophysical processes in fluorescent proteins.
-  }
-%------------------------------------------------
-\end{entrylist}
-
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
-\vspace{-5mm}
-\section{Educ}{ation}
-\vspace{-0.2cm}
-
-\begin{entrylist}
-%------------------------------------------------
-\entry
-{2006-2009}
-{PhD in chemistry {\normalfont speciality theoretical chemistry}}
-{Université Paris-Sud 11}
-{Mention très honorable}
-%------------------------------------------------
-\entry
-{2004-2006}
-{Master degree of physical-chemistry}
-{Université Paris-Sud 11}
-{{\normalfont speciality \textit{Physico-Chimie Moléculaire}}\par Mention TB}
-%------------------------------------------------
-\entry
-{2003-2004}
-{Bachelor Degree of physical-chemistry}
-{Université Paris-Sud 11}
-{Mention TB}
-%------------------------------------------------
-\entry
-{2003-2006}
-{Magistère de Physico-Chimie Moléculaire}
-{Université Paris-Sud 11 -- ENS Cachan}
-{\vspace{-4mm}}
-%------------------------------------------------
-\entry
-{2001-2003}
-{Undergraduate {\normalfont physics and chemistry}}
-{Lycée François Arago, Perpignan}
-{}
-\end{entrylist}
-
-%----------------------------------------------------------------------------------------
-%	OTHER QUALIFICATIONS SECTION
-%----------------------------------------------------------------------------------------
-\vspace{-6mm}
-\section{Main}{ publications}
-\vspace{-0.2cm}
-\nocite{munoz2019, santos2018, aqturin2017_2, santos2017, vallverdu2016, Maillet2011, Vallverdu2010}
-%\nocite{santos2018, aqturin2017_2, santos2017, vallverdu2016, Martin2012, Maillet2011, Vallverdu2010}
-\begin{btSect}{bib/cv_articles}
-    \setlength{\bibsep}{2pt}
-    \btPrintCited
-\end{btSect}
-
-%----------------------------------------------------------------------------------------
-%	INTERESTS SECTION
-%----------------------------------------------------------------------------------------
-
-% \section{interests}
-%   \vspace{-0.2cm}
-%
-% \textbf{professional:} professional interest 1, professional interest 2 and professional interest 3.
-% \textbf{personal:} personal interest 1, personal interest 2, personal interest 3 and personal interest 4.
-
-%----------------------------------------------------------------------------------------
-%	TEACHING SECTION
-%----------------------------------------------------------------------------------------
+\cvevent{Energy storage materials -- Li-ion batteries}{University of Pau \& Pays Adour / RS2E}{}{}
 \vspace{-1mm}
-\section{Teach}{ing}
-  \vspace{-0.3cm}
+\begin{itemize}
+\item Surface reactivity of cathode materials
+\item Coupled studies between quantum chemistry and experimental surface characterization
+\item Interfaces: structure, electronic properties and thermochemistry
+\end{itemize}
 
-$\bullet$ Lectures in chemical-physics, theoretical chemistry and programming languages.\\
-%in bachelor degrees, master degrees and doctoral school. About 200 h/year\\
-$\bullet$ Strong involvement in new information and communication technologies for education\\
-$\bullet$ Science popularization: Quantum mechanics and workshops for school students
-%organization of animations for secondary and primary school pupils.
+\divider
 
-\vspace*{-5mm}
+\cvevent{Petroleum chemistry and complex matrices}{University of Pau \& Pays Adour / C2MC}{}{}
+\vspace{-1mm}
+\begin{itemize}
+\item Physico-chemical properties of asphaltenes: solubility, aggregation
+\item Molecular modelling and molecular dynamics simulations
+\item Molecular characterization of complex matrices (heavy crude oil)
+\end{itemize}
 
-%\begin{itemize}
-%    \item Lectures in chemical-physics, theoretical chemistry and programming languages, in bachelor
-%    degrees, master degrees and doctoral school.
-%    \item Science popularization: Quantum mechanics, animations for secondary and primary school pupils
-%\end{itemize}
+\divider
 
-%----------------------------------------------------------------------------------------
+\cvevent{Python Scientific Libraries}{University of Pau \& Pays Adour}{}{}
+\vspace{-1mm}
+\begin{itemize}
+\item \texttt{Pymatgen}: Python Materials Genomics {(\footnotesize\url{http://pymatgen.org/team.html})}
+\item Mammoth: a molecular force field optimizer \hbox{(\footnotesize\url{https://mammoth_uppa.gitlab.io/})}
+\item Mosaïca: a generator of nano-materials based on their intrinsic geometry
+\end{itemize}
+
+% \divider
+
+% \cvevent{PhD Thesis}{Université Paris-Sud 11}{3 years}{Orsay, France}
+% Theoretical study of photophysics properties of fluorescent proteins
+
+
+
+
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
+
 
 \end{document}
