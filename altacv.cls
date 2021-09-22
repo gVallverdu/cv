@@ -298,15 +298,15 @@
 \newcommand{\lastupdated}[1]{\def\@lastupdated{#1}}
 \lastupdated{}
 %%%
-\RequirePackage[backend=biber,style=authoryear,sorting=ydnt]{biblatex}
-%% For removing numbering entirely when using a numeric style
-% \setlength{\bibhang}{1em}
-% \DeclareFieldFormat{labelnumberwidth}{\makebox[\bibhang][l]{\itemmarker}}
-% \setlength{\biblabelsep}{0pt}
-\defbibheading{pubtype}{\cvsubsection{#1}}
-\renewcommand{\bibsetup}{\vspace*{-\baselineskip}}
-\AtEveryBibitem{\makebox[\bibhang][l]{\itemmarker}}
-\setlength{\bibitemsep}{0.25\baselineskip}
+%\RequirePackage[backend=biber,style=authoryear,sorting=ydnt]{biblatex}
+%%% For removing numbering entirely when using a numeric style
+%% \setlength{\bibhang}{1em}
+%% \DeclareFieldFormat{labelnumberwidth}{\makebox[\bibhang][l]{\itemmarker}}
+%% \setlength{\biblabelsep}{0pt}
+%\defbibheading{pubtype}{\cvsubsection{#1}}
+%\renewcommand{\bibsetup}{\vspace*{-\baselineskip}}
+%\AtEveryBibitem{\makebox[\bibhang][l]{\itemmarker}}
+%\setlength{\bibitemsep}{0.25\baselineskip}
 
 % v1.1.2: make it easier to add a sidebar aligned with top of next page
 \RequirePackage{afterpage}
