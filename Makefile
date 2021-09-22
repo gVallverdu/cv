@@ -1,6 +1,8 @@
 # rules
 # -----
 
+all: fr-short en-short
+
 fr-short: cv-fr-short.tex
 	latexmk -xelatex -shell-escape $<
 	@echo ""
