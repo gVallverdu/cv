@@ -282,6 +282,22 @@
 
 \newenvironment{cvcolumn}[1]{\begin{minipage}[t]{#1}\raggedright}{\end{minipage}}
 
+%----------------------------------------------------------------------------------------
+%	Last updated command %
+%----------------------------------------------------------------------------------------
+
+\RequirePackage{polyglossia}
+
+\newcommand{\sethyphenation}[3][]{%
+  \sbox0{\begin{otherlanguage}[#1]{#2}
+    \hyphenation{#3}\end{otherlanguage}}}
+%\sethyphenation[<options>]{<language>}{<list of words separated by spaces>}
+
+\setdefaultlanguage[variant=british]{english}
+
+\newcommand{\lastupdated}[1]{\def\@lastupdated{#1}}
+\lastupdated{}
+%%%
 \RequirePackage[backend=biber,style=authoryear,sorting=ydnt]{biblatex}
 %% For removing numbering entirely when using a numeric style
 % \setlength{\bibhang}{1em}

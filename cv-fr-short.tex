@@ -1,0 +1,148 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.5, 1 December 2018) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+% \documentclass[10pt,a4paper,normalphoto,academicons]{altacv}
+\documentclass[10pt,a4paper,ragged2e,academicons]{altacv}
+
+\setdefaultlanguage{french}
+\sethyphenation{french}{} % Add words between the {} to avoid them to be cut
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{%
+left=1cm,%
+right=8.8cm,%
+marginparwidth=6.9cm,%
+marginparsep=1cm,%
+top=1.25cm,%
+bottom=1.25cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  %\setmainfont{Ubuntu}
+   \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{Mulberry}{HTML}{72243D}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{GoodSamaritan}{HTML}{3C6382}
+\colorlet{heading}{GoodSamaritan}
+% \colorlet{heading}{Sepia}
+% \colorlet{accent}{Mulberry}
+\colorlet{accent}{GoodSamaritan}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+% \addbibresource{sample.bib}
+
+\begin{document}
+\name{Mario Burbano}
+\tagline{Cloud Data Engineer and Scientist}
+\photo{3.4cm}{img/MB.png}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  14 November 1984 -- In cohabitation\\
+  \vspace{1ex}
+  \email{burbanom@tcd.ie}
+  \phone{+ 33 6 43 27 79 22}
+  % \mailaddress{My Address Here}
+  \location{Antony, FRANCE}
+  % \twitter{@twitterhandle}
+  \github{github.com/burbanom}
+  \linkedin{linkedin.com/in/burbanom/}
+  \printinfo{Nationality}{Irish/Colombian}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\parbox{.7\paperwidth}{%
+PhD in Computational Chemistry with extensive experience in cloud computing, task automation and data analysis.
+}
+
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+% \marginpar{\include{sidebar}}
+% \cvsection{Experience}
+\cvsection[sidebar]{Experience}
+
+\cvevent{TOCOMPLETE}{TOCOMPLETE}{2021 -- Ongoing}{Paris, France}
+\begin{itemize}
+\item TOCOMPLETE 
+\end{itemize}
+
+\divider
+
+\cvevent{Research Engineer}{CEA}{2016 -- 2018}{Saclay, France}
+\begin{itemize}
+\item TOCOMPLETE 
+\end{itemize}
+
+\divider
+
+\cvevent{Ph.D. in Computational Chemistry}{Trinity College Dublin}{2009 -- 2014}{Dublin, Ireland}
+Computer modelling of metal oxides
+\smallskip
+\begin{itemize}
+\item Carried out molecular simulations of materials energy production and storage
+\item Used Fortran/MPI to write simulations and data analysis programs
+\end{itemize}
+{\small 12 peer-reviewed articles, h-\textit{index} 11, 577 citations}
+
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
+
+
+\end{document}
