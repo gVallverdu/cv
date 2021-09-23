@@ -1,0 +1,141 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+\photo[circle,noedge,left]{img/MB.png}
+\name{Mario }{Burbano}
+\position{Technical Project Manager{\enskip\cdotp\enskip}Mechatronics and Biomedical engineer}
+\address{Antony, France}
+
+\mobile{(+33) 7 70 49 23 44}
+\email{laura-gomez@gmx.fr}
+%\homepage{www.posquit0.com}
+%\github{posquit0}
+\linkedin{laura-gomez-0a547158}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra informations}
+
+% \quote{``Be the change that you want to see in the world."}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {FKG Dentaire S.A.}
+  {La Chaux-de-Fonds\\Switzerland}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{R\&D Project Manager}
+% How the letter is opened
+\letteropening{Dear Sir or Madam}
+% How the letter is closed
+\letterclosing{
+I'd be thrilled to learn more about this job opening. Thank you for your time, I look forward to hearing from you.\\ \\Best Regards,}
+% Any enclosures with the letter
+\letterenclosure[Attached]{Curriculum Vitae}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Mario Burbano~~~·~~~Cover Letter}
+  {}
+
+% Print the title with above letter informations
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+%\lettersection{Introduction}
+
+My educational background is in the physical sciences. Throughout my career as a research scientist I have consistently relied on the power of computers and the data that they generate in order to elucidate the properties of materials for energy storage.
+
+The domain of high performance computing, where I gained the bulk of my professional experience since the beginning of my PhD, relies on the harnessing of computer clusters connected via high speed networks in order to make it possible to perform simulations of large and/or complex systems. My role as a researcher consisted of implementing the algorithms that represent the physical systems in question, namely battery or solar cell materials, while taking into account the distributed nature of the computer cluster architecture. The research process then necessitated that I gather the vast amounts of data that result from the simulations, that I parse them and that I interpret them in the context of their physical/chemical meaning. The final aspect, and crown achievement of this investigative process, is the communication of the results with the research community by way of scientific articles that are written in collaboration with different teams. My published articles can be found on my google scholar page.  
+
+The academic world where I crafted my skills, relies heavily on the linux environment, with FORTRAN being the language of choice for the implementation of algorithms in physics/chemistry. I have also extensive experience of Python which I have used in several contexts, for example as a wrapper/controller for low level language codes, as a tool for fitting/modelling data with scipy, as a means to visualize data using matplotlib and to generate reports and explore trends with Jupyter. My work on the public domain can be found on my github page. 
+
+I am highly motivated by the developments in the field of Data Science, as they represent a tangible step towards a better understanding of the world around us due to the large range of environments where these methods are finding application. My interest in the field of Data Science is further motivated by the technical/theoretical challenges that this domain represents, for example in the development and implementation of new methods. 
+
+Leveraging the incredible promise of Data Science will be vital for businesses in the coming years as it will allow them to predict market trends in order to make better-informed decisions; Data Science will also allow companies to gain a deeper understanding of customers, identify problems in manufacturing processes and it could even in assist companies in the design of new products by harnessing the power of artificial intelligence. These are all very exciting developments and I would like to be part of this new wave of knowledge. 
+
+\end{cvletter}
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter information
+\makeletterclosing
+
+
+\end{document}
