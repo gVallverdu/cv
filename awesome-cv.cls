@@ -724,7 +724,9 @@
 \newcommand*{\makeletterclosing}{%
   \vspace{3.4mm}
   \lettertextstyle{\@letterclosing} \\\\
-  \letternamestyle{\@firstname\ \@lastname}
+  \letternamestyle{\@firstname\ \@lastname} \\\\
+  \vspace{2.0mm}
+  \includegraphics[width=.15\columnwidth]{img/Signature}
   \ifthenelse{\isundefined{\@letterenclosure}}
     {\\}
     {%
