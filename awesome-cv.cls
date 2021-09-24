@@ -89,7 +89,14 @@
   pdfkeywords={}
 }
 
+\RequirePackage{polyglossia}
 
+\newcommand{\sethyphenation}[3][]{%
+  \sbox0{\begin{otherlanguage}[#1]{#2}
+    \hyphenation{#3}\end{otherlanguage}}}
+%\sethyphenation[<options>]{<language>}{<list of words separated by spaces>}
+
+\setdefaultlanguage[variant=british]{english}
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
 %-------------------------------------------------------------------------------
