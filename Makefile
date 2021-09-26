@@ -1,7 +1,8 @@
 # rules
 # -----
 
-all: fr-short en-short en-coverletter
+all: fr-short en-short en-coverletter \
+	fr-coverletter
 
 fr-short: cv-fr-short.tex
 	latexmk -xelatex $<
@@ -14,6 +15,11 @@ en-short: cv-en-short.tex
 	@echo "done"
 
 en-coverletter: coverletter-en.tex
+	latexmk -xelatex $<
+	@echo ""
+	@echo "done"
+
+fr-coverletter: coverletter-fr.tex
 	latexmk -xelatex $<
 	@echo ""
 	@echo "done"

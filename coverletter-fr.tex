@@ -1,0 +1,128 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+\setdefaultlanguage{french}
+\sethyphenation{french}{} % Add words between the {} to avoid them to be cut
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+\setmainfont{Lato}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{false}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+%\photo[circle,noedge,left]{img/MB.png}
+\name{Mario }{Burbano}
+\position{Cloud Data Engineer and Analyst{\enskip\cdotp\enskip}PhD in Computational Chemistry}
+\address{Antony, France}
+
+\mobile{+ 33 6 43 27 79 22}
+\email{burbanom@tcd.ie}
+%\homepage{www.posquit0.com}
+\github{burbanom}
+\linkedin{burbanom}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+%% \firstname and \lastname will be used
+\googlescholar{zPuB-z0AAAAJ}{Mario Burbano}
+% \extrainfo{extra informations}
+
+% \quote{``Be the change that you want to see in the world."}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {COMPANY}
+  {CITY\\Switzerland}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{ADDTITLE}
+% How the letter is opened
+\letteropening{Dear Sir or Madam}
+% How the letter is closed
+\letterclosing{
+There are many more aspects to my diverse career and life experience that I have not shared here with you, but that I can no doubt elaborate on should you do decide to contact me. Thank you for your time, I look forward to hearing from you.\\ \\Best Regards,}
+% Any enclosures with the letter
+%\letterenclosure[Attached]{Curriculum Vitae}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Mario Burbano~~~·~~~Cover Letter}
+  {}
+
+% Print the title with above letter informations
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+%\lettersection{Introduction}
+
+My educational background is in the physical sciences. Throughout my career as a research scientist I relied on the power of computers and the data that they generate in order to elucidate and predict the properties of materials for energy storage and generation.
+
+The domain of high performance computing, where I gained the bulk of my professional experience, makes use of computer simulations to understand complex systems. My role as a researcher consisted of implementing algorithms to model battery or solar cell materials, then carrying out simulations from which data could be gathered, transformed and ultimatley interpreted within the context of its physical/chemical meaning. The final aspect, and crown achievement of this investigative process, was the communication of the results with the research community by way of scientific articles often written in collaboration with different teams. My published articles can be found on my google scholar page (link above).
+
+Since leaving the world of academic research I have been able to adapt my skills to Cloud Computing environments like Amazon Web Services and Google Cloud Platform. I have also extensive experience with Python, which I have used in several contexts, for example as a tool for analyzing data with \texttt{pandas}/\texttt{scikit-learn}, as a tool for moving/extracting data with \texttt{sqlalchemy} and as a means to expose data with Flask APIs, among others. Through practice, I have gained significant knowledge of SQL and tools like Dataiku DSS, for which I am an instructor.
+
+I am a highly motivated person who is able to adapt to different environments, whether they be technical or cultural, having lived in Colombia, Ireland and France. The projects that I have worked on outside fundamental research have touched upon a theme that is common for many companies nowdays, namely the migration of their existing on-premise infrastructures towards the cloud. My added value in this context has been twofold: by applying my data analysis skills I have been able to provide decision makers with valuable information with regard to the tasks that need to be prioritized while my capacity to abstract concepts has allowed me to automate time-consuming tasks.
+
+Leveraging the incredible value that is present within data will be vital for businesses in the coming years as it will allow them gain a competitive edge over their competitors. These are indeed exciting times for those of us who are working in this field due to the fast-paced evolution that we are witnessing. It is within this context that my eagerness to learn and stay up to date with the latest developments plays a critical role in distinguishing myself from other candidates. 
+
+\end{cvletter}
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter information
+\makeletterclosing
+
+
+\end{document}
