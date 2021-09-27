@@ -26,8 +26,8 @@ fr-coverletter: coverletter-fr.tex
 
 # dependencies
 # ------------
-cv-fr-short.tex: img/MB.png
-cv-en-short.tex: img/MB.png
+cv-fr-short.tex: img/CVPhoto.png
+cv-en-short.tex: img/CVPhoto.png
 
 # WARNING
 # ---------------------
