@@ -46,6 +46,7 @@
 %-------------------------------------------------------------------------------
 %                3rd party packages
 %-------------------------------------------------------------------------------
+\usepackage{comment}
 % Needed to make fixed length table
 \RequirePackage{array}
 % Needed to handle list environment
