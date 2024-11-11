@@ -36,5 +36,12 @@ dossier_Direction: dossier_Direction.tex
 	$(CC) $<
 	$(CC) $<
 
+dossier_luis: dossier_luis.tex
+	$(CC) $<
+	$(CC) $<
+	bibtex $@
+	$(CC) $<
+	$(CC) $<
+
 clean:
 	rm -v *.aux *.log *.bbl *.blg *.synctex.gz *.toc
